@@ -17,42 +17,85 @@
         <a class="navbar-brand" href="#"> Random Password Generator</a>
     </nav>
 
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <div class="col-lg-8 col-sm-12 mx-auto">
+                    <div class="content">
+                        <h4> Random Password Generator</h4>
+                        <br>
+                        <input type="text" id="display">
+                        <br>
+                        <button onclick="" id="generatePassword">Generate Password</button>
+                        <button onclick=""> Copy to Clipboard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-    <div class="success" id="demo">text will be blue</div>
+    <!-- <div class="success" id="demo">text will be blue</div> -->
 
     <input type="text" name="randomPassword" id="randomPassword">
     <button id="generatePassword">Generate Password</button>
 
+
     <script>
-        // variables
-        // variables for lowercase letters, uppercase letters etc
+        {/* // variables
+        // variables for lowercase letters, uppercase letters etc */}
 
-        var lowercase = ["a", "b", "c", "d"]
-        var number = ["1", "2", "3"]
-        var special = ["!", "@"]
-        var possibleCharacters = []
-        var password = []
 
-        // Promps to ask the user
-        // How many characters
+        var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        var number = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+        var special = ["!", "@", "#", "$", "%", "^", "&", "*", "+"];
+        var possibleCharacters = [];
+        var password = [];
+
+
+
+        // Prompts to ask the user
+
+        alert("Welcome to my Password Generating page!");
+
         // Prompt and then we'll save input as a variable
-        var numberOfChars = 10;
+        var numberOfChars = [];
         // lowercase
         // boolean 
+
+        var lowercaseConfirm = confirm("Do you want to use lowercase letter?")
 
         // uppercase
         // boolean 
 
+        var uppercaseConfirm = confirm("Do you want to use uppercase letter?")
+
         // numbers
         // boolean 
+
+        var numbersConfirm = confirm("Do you want to use numbers?")
 
         // special characters
         // boolean 
 
+        var specialConfirm = confirm("Do you want to use special characters?")
+
+        // How many characters
+        var chooseNumber = prompt("Choose a number")
+
+        if (chooseNumber < 8) {
+            alert("Please choose a number that is more than 8")
+        }
+
+        if (chooseNumber > 128) {
+            alert("Please choose a number that is less than 128")
+        }
+
+
         // Make random password
         // if statement to see what characters the users wants
-        // one if statement for each character type
+        // one if statement for each character type 
+
         if (special === true) {
             //    possibleCharacters.push("1")
             possibleCharacters = possibleCharacters.concat(special)
@@ -80,6 +123,15 @@
 
         // Let user make a new password
 
+        var randomLetter = '';
+        function generate() {
+            for (i = 0; i < 10; i++) {
+                randomLetter += arr[Math.floor(arr.length * Math.random())];
+
+            }
+            document.getElementById("pw").innerHTML = randomLetter;
+            randomLetter = '';
+        }
     </script>
 </body>
 
