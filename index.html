@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="success" id="demo">text will be blue</div>
+
+    <script>
+        // variables
+        // variables for lowercase letters, uppercase letters etc
+
+        var lowercase = ["a", "b", "c", "d"]
+        var number = ["1", "2", "3"]
+        var special = ["!", "@"]
+        var possibleCharacters = []
+        var password = []
+
+        // Promps to ask the user
+        // How many characters
+        // Prompt and then we'll save input as a variable
+        var numberOfChars = 10;
+        // lowercase
+        // boolean 
+
+        // uppercase
+        // boolean 
+
+        // numbers
+        // boolean 
+
+        // special characters
+        // boolean 
+
+        // Make random password
+        // if statement to see what characters the users wants
+        // one if statment for each character type
+        if (special === true) {
+        //    possibleCharacters.push("1")
+            possibleCharacters = possibleCharacters.concat(special)
+        }
+        if (number === true) {
+            possibleCharacters = possibleCharacters.concat(number)
+
+        }
+
+        // use possible characters to make a random password
+        for (var i = 0; i < numberOfChars; i++){
+            console.log("i is " + i);
+            // Take a random character from possible characters array
+            // Generate a random number
+            var char = Math.floor(Math.random() * possibleCharacters.length);
+
+            password.push(possibleCharacters[char])
+        }
+        document.getElementById("demo").innerHTML = password;
+
+
+        // Let user make a new password
+
+    </script>
+</body>
+</html>
