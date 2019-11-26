@@ -5,3 +5,27 @@
     padding: 20px;
     width: 100%;
 }
+
+#display{
+    width:100%;
+}
+
+.header{
+    background-color: #264d73;
+}
+
+.main-content{
+    background-color: #6784AF  ;
+    height: 250px;
+    border-radius: 15px;;
+}
+
+.display-box{
+    border: dotted;
+    height: 110px;
+    width: 400px;
+}
+
+.generate , .clipboard{
+    border-radius: 30px;;
+}

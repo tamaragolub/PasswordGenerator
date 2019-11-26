@@ -5,128 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title> Password Generator </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"> Random Password Generator</a>
-    </nav>
 
-    <div class="container" id="display">
+
+    <div class="container">
+
         <div class="row">
-            <div class="column">
-                <div class="col-lg-8 col-sm-12 mx-auto">
-                    <div class="content">
-                        <h4> Random Password Generator</h4>
-                        <br>
-                        <button onclick="" id="generatePassword">Generate Password</button>
-                        <button onclick=""> Copy to Clipboard</button>
-                    </div>
-                </div>
+            <div class="col header text-center text-white h4">
+                <p>Random Password Generator</p>
             </div>
         </div>
-    </div>
 
 
-
-
-    <script>
-        {/* // variables
-        // variables for lowercase letters, uppercase letters etc */}
-
-
-        var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-        var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-        var number = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-        var special = ["!", "@", "#", "$", "%", "^", "&", "*", "+"];
-        var possibleCharacters = [];
-        var password = [];
-
-
-
-        // Prompts to ask the user
-
-        alert("Welcome to my Password Generating page!");
-
-        // Prompt and then we'll save input as a variable
-        var numberOfChars = [];
-
-        // lowercase
-        // boolean 
-
-        var lowercaseConfirm = confirm("Do you want to use lowercase letter?")
-
-        // uppercase
-        // boolean 
-
-        var uppercaseConfirm = confirm("Do you want to use uppercase letter?")
-
-        // numbers
-        // boolean 
-
-        var numbersConfirm = confirm("Do you want to use numbers?")
-
-        // special characters
-        // boolean 
-
-        var specialConfirm = confirm("Do you want to use special characters?")
-
-        // How many characters
-        var chooseNumber = prompt("Choose a number between 8 and 128")
-
-        if (chooseNumber < 8) {
-            alert("Please choose a number that is more than 8")
-        }
-
-        if (chooseNumber > 128) {
-            alert("Please choose a number that is less than 128")
-        }
-
-
-        // Make random password
-        // if statement to see what characters the users wants
-        // one if statement for each character type 
-
-        if (special === true) {
-            possibleCharacters = possibleCharacters.concat(special)
-        }
-        if (number === true) {
-            possibleCharacters = possibleCharacters.concat(number)
-        }
-        if (uppercase === true) {
-            possibleCharacters = possibleCharacters.concat(uppercase)
-        }
-        if (lowercase === true) {
-            possibleCharacters = possibleCharacters.concat(lowercase)
-        }
-
-        // use possible characters to make a random password
-        for (var i = 0; i < numberOfChars; i++) {
-            console.log("i is " + i);
-            // Take a random character from possible characters array
-            // Generate a random number
-            var char = Math.floor(Math.random() * possibleCharacters.length);
-
-            password.push(possibleCharacters[char])
-        }
-
+        <div class="row">
     
+                <div class="col-md-2"></div>
     
+                <div class="col-md-8">
+                    <div class="main-content text-center mt-5">
+                        <p class="box-title h1"><u>Generate a Password</u></p>
+                        <br>
+                        <input type="text" class="display-box text-center" id="displayBox">
+                        <br>
+                        <button onclick="" id="generatePassword" class="generate mt-3 mr-4 bg-danger" >Generate Password</button>
+                        <button onclick="" class="clipboard mt-3 ml-4">Copy To Clipboard</button>
+                    </div>
+                </div>
+    
+                <div class="col-md-2"></div>
+            </div>
+        </div>
 
-        // function generate() {
-        //     document.getElementById("").innerHTML = password;
-        document.body.innerHTML = "<h1>Your password is " + password + "</h1>"
-        // }
 
+        <script src="./script.js"></script>
 
-        // // Let user make a new password
-
-    </script>
 </body>
 
 </html>
