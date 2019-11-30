@@ -97,7 +97,7 @@ document
 
     function numberOfChar() {
       // How many characters
-     chooseNumber = prompt("Choose a number between 8 and 128");
+      chooseNumber = prompt("Choose a number between 8 and 128");
 
       if (chooseNumber < 8) {
         alert("Please choose a number that is more than 8");
@@ -137,16 +137,22 @@ document
         var char2 = Math.floor(Math.random() * possibleCharacters[char].length);
 
         password.push(possibleCharacters[char][char2]);
-
       }
 
-        console.log(password)
-        document.getElementById("displayBox").value = password.join("");
-
+      console.log(password);
+      document.getElementById("displayBox").value = password.join("");
     }
 
     passwordGenerator();
+    
+    function copyPassword() {
+      document.getElementById("displayBox").select();
+    
+      document.execCommand("copy");
+    
+      alert("Password copied to clipboard!");
+    }
   });
 
-
 // // Let user make a new password
+

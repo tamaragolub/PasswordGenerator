@@ -19,7 +19,7 @@ What things you need to install the software
 
 ## Screenshot of the display
 
-![image](https://user-images.githubusercontent.com/55814090/67212563-8d4c5e80-f3ea-11e9-9a04-0e70854c8e98.png)
+![image](https://user-images.githubusercontent.com/55814090/69893969-afd56f80-12e6-11ea-9753-33d878d8e66f.png)
 
 
 ## Table of Contents
